@@ -9,31 +9,49 @@
 
     <style>
         @keyframes sliding {
-            from {
-                background-color: limegreen;
+            0% {
+                background-color: black;
                 left: 0;
+                top: 0;
+                transform: scale(0.5);
+            }
+
+            25% {
+                top: 200px;
+                background-color: white;
+            }
+
+            50% {
+                top: 0;
+                background-color: black;
+            }
+
+            75% {
+                top: 200px;
+                background-color: white;
             }
 
             to {
-                background-color: orange;
-                left: 200px;
+                background-color: black;
+                left: 600px;
+                top: 0;
             }
 
         }
 
         .stage {
-            width: 300px;
+            width: 700px;
             height: 300px;
-            background-color: lightpink;
+            background-color: rgb(228, 20, 20);
         }
 
         .ball {
             width: 100px;
             height: 100px;
-            background-color: limegreen;
+            background-color: black;
             border-radius: 50px;
             position: relative;
-            animation: sliding 1s ease-in-out .5s infinite alternate;
+            animation: sliding 2s ease-in-out .5s infinite alternate;
             animation-play-state: running;
         }
     </style>
